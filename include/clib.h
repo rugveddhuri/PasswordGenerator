@@ -14,6 +14,6 @@
 #ifndef INCLUDE_CLIB_H_
  #define INCLUDE_CLIB_H_
  #define MAX 50
- #define MIN 00
+ #define MIN 01
  char *passGen(int);
 #endif
