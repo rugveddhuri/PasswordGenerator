@@ -21,6 +21,11 @@ int main(int argc, char *argv[]) {
 
     pass = passGen(length);
 
-    printf("Password is: %s", pass);
+    if(pass == NULL) {
+    	fprintf(stderr, "Invalid Input!");
+    } else {
+    	printf("Password is: %s", pass);
+    }
+
     return EXIT_SUCCESS;
 }
