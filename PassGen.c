@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     pass = passGen(length);
 
     if(pass == NULL) {
-    	fprintf(stderr, "Invalid Input!");
+    	fprintf(stderr, "Failed to Generate Password!\n");
     } else {
     	printf("Password is: %s", pass);
     }

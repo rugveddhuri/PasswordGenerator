@@ -38,6 +38,17 @@ char *passGen(int length) {
 		}
 		newPass[i] = '\0';
 	}
+	else {
+		/* Print Errors */
+
+		if(length > MAX) {
+			fprintf(stderr, "Invalid Input! Maximum length is %d\n", MAX);
+		}
+
+		if(length < MAX) {
+			fprintf(stderr, "Invalid Input! Minimum length is %d\n", MIN);
+		}
+	}
 
 	return newPass;
 }
