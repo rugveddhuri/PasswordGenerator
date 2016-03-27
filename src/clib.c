@@ -12,14 +12,16 @@
 char *passGen(int length, bool specialCharacters) {
 	int character,
 	    counter = 0;
-	time_t t;
+	static time_t tm = NULL;
 	char *newPass = NULL;
 
 	if (length <= MAX && length >= MIN) {
 		newPass = (char *) malloc(sizeof(char) * length);
 
 		/* Initializes random number generator */
-		srand((unsigned) time(&t));
+		if(tm == NULL)
+			time(&tm);
+		srand((unsigned) tm++);
 
 		while (counter < length) {
 			character = rand() % 125;
