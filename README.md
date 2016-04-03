@@ -7,7 +7,8 @@ Description: Auto Generates Passwords
 
 Options:
   -s     Generates Password with Special Character (optional).
-  -n [N] Generates N number of passwords (optional).
+  
+          -n [N] Generates N number of passwords (optional).
       
 eg. PassGen 20 
 - Generates random password of length 20
