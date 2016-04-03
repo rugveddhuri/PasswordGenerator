@@ -72,8 +72,10 @@ int main(int argc, char *argv[]) {
     		pass = passGen(length, specialCharacters);
     		if(pass == NULL)
     			requiredParameter++;
-    		else
+    		else {
     			printf("%s\n",pass);
+    			free(pass);
+    		}
     	}
     	else {
     		printf("Passwords are\n");
@@ -81,8 +83,10 @@ int main(int argc, char *argv[]) {
 				pass = passGen(length, specialCharacters);
 				if(pass == NULL)
 					requiredParameter++;
-				else
+				else {
 					printf("%s\n",pass);
+					free(pass);
+				}
 			}
     	}
     }
