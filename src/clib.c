@@ -23,7 +23,7 @@ char *passGen(int length, bool specialCharacters) {
 			time(&tm);
 		srand((unsigned) tm++);
 
-		while (counter < length) {
+		while (counter < (length - 1)) {
 			character = rand() % 125;
 
 			/* Special Characters */
